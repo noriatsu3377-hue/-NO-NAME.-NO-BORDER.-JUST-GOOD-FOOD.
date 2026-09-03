@@ -3,548 +3,391 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>名の無いタコスとバーガー屋｜全国を旅するTEX-MEX料理人</title>
-  <meta name="description" content="全国を旅し、地域の旬の食材を使ったタコスとハンバーガーを提供する「名の無いタコスとバーガー屋」。地域イベント、間借り営業、ポップアップ、飲食店とのコラボ依頼を全国から募集しています。">
+  <title>THE NAMELESS ROAD DINER | 名の無いタコスとバーガー屋</title>
+  <meta name="description" content="全国を旅し、土地の旬を挟み、包む。タコスとバーガーのポップアップダイナー「名の無いタコスとバーガー屋」。イベントや間借り営業のご依頼をお待ちしています。">
   
-  <!-- OGP -->
-  <meta property="og:title" content="あなたの街に、名の無いタコスとバーガー屋を。">
-  <meta property="og:description" content="店はない。名前もまだない。あるのは、忘れられない一皿だけ。全国のイベント・飲食店・キャンプ場から出店依頼を募集しています。">
+  <meta property="og:title" content="あなたの街で、まだ名前のない一皿を。">
+  <meta property="og:description" content="店はない。名前もまだない。だから、どこへでも行ける。日本各地を旅する移動式ダイナーの記録。">
   <meta property="og:type" content="website">
-  <!-- <meta property="og:url" content="URL_HERE"> -->
-  <!-- <meta property="og:image" content="images/hero.jpg"> -->
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Anton for big English, Noto Sans JP for Japanese -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
   
-  <!-- JSON-LD 構造化データ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "原口 刀麻",
     "jobTitle": "全国を旅する「名の無いタコスとバーガー屋」の料理人",
-    "description": "全国を旅し、その土地で出会った旬の食材を取り入れながら、これまでにないタコスとハンバーガーを作る活動を行っています。",
-    "worksFor": {
-      "@type": "Organization",
-      "name": "名の無いタコスとバーガー屋"
-    }
+    "description": "日本全国を旅し、その土地で出会った食材を取り入れながら、これまでにないタコスとハンバーガーを作る活動を行っています。"
   }
+  </script>
+
+  <!-- JS有効時のみアニメーションを適用するための仕掛け -->
+  <script>
+    document.documentElement.classList.add('js-enabled');
   </script>
 </head>
 <body>
 
-  <!-- 1. ヘッダー -->
-  <header id="header" class="header">
-    <div class="header-container">
-      <a href="#" class="logo">
-        <img src="images/logo.png" alt="名の無いタコスとバーガー屋 ロゴ">
+  <!-- 共通ヘッダー -->
+  <header class="header js-header">
+    <div class="header-inner">
+      <a href="#" class="logo-text">
+        <span class="logo-main">NAMELESS</span>
+        <span class="logo-sub">TACOS & BURGERS</span>
+        <span class="logo-micro">TRAVELING DINER / JAPAN</span>
       </a>
-      <div class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false">
+      
+      <div class="hamburger js-hamburger" aria-label="メニューを開く" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
       </div>
-      <nav class="global-nav" id="global-nav">
+
+      <nav class="global-nav js-nav">
         <ul>
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#menu">MENU</a></li>
+          <li><a href="#concept">CONCEPT</a></li>
+          <li><a href="#food">FOOD</a></li>
           <li><a href="#request">REQUEST</a></li>
-          <li><a href="#schedule">SCHEDULE</a></li>
+          <li><a href="#tour">TOUR</a></li>
+          <li><a href="#gallery">GALLERY</a></li>
           <li><a href="#chef">CHEF</a></li>
           <li><a href="#contact">CONTACT</a></li>
         </ul>
-        <!-- CTA in header -->
-        <a href="#contact" class="btn-header">出店を依頼する</a>
       </nav>
     </div>
   </header>
 
-  <!-- 2. ファーストビュー -->
+  <!-- 1. HERO -->
   <section class="hero">
-    <div class="hero-bg">
-      <img src="images/hero.jpg" alt="タコスとハンバーガーのイメージ">
+    <div class="hero-bg img-wrapper">
+      <img src="images/hero.jpg" alt="鉄板で焼かれるバーガーと立ち上る湯気">
       <div class="hero-overlay"></div>
+      <div class="hero-grain"></div>
     </div>
-    <div class="hero-content fade-up">
-      <p class="hero-en-copy">NO NAME. NO BORDER.<br>JUST GOOD FOOD.</p>
-      <h1 class="hero-main-copy">店はない。名前もまだない。<br>あるのは、忘れられない一皿だけ。</h1>
-      <p class="hero-desc">
-        全国を旅し、各地の旬の食材を使って、<br>
-        新しいタコスとハンバーガーを作る料理人・原口刀麻。<br>
-        地域イベント、間借り営業、ポップアップ、コラボ出店のご依頼を全国から募集しています。
-      </p>
-      <div class="hero-buttons">
-        <a href="#contact" class="btn btn-primary">出店・コラボを依頼する</a>
-        <a href="#schedule" class="btn btn-secondary">出店スケジュールを見る</a>
+    
+    <div class="hero-content fade-in">
+      <h1 class="hero-title">
+        <span>NO NAME.</span><br>
+        <span>NO BORDER.</span><br>
+        <span>JUST GOOD FOOD.</span>
+      </h1>
+      <div class="hero-copy">
+        <p class="copy-main">店はない。名前もまだない。<br>だから、どこへでも行ける。</p>
+        <p class="copy-sub">全国を旅し、土地の旬を挟み、包む。<br>タコスとバーガーのポップアップダイナー。</p>
       </div>
-      <div class="hero-badges">
-        <span class="badge">全国対応</span>
-        <span class="badge">ご予約は原則1週間前まで</span>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">この店を街に呼ぶ</a>
+        <a href="#tour" class="link-sub">現在地を見る</a>
+      </div>
+    </div>
+
+    <!-- ステッカー装飾 -->
+    <div class="hero-stickers">
+      <div class="sticker s-1">SINCE 2026</div>
+      <div class="sticker s-2">ON THE ROAD</div>
+      <div class="sticker s-3">ALL OVER JAPAN</div>
+      <div class="sticker s-4">MAX 20 PEOPLE</div>
+      <div class="sticker s-5">NEXT STOP：OKINAWA</div>
+    </div>
+  </section>
+
+  <!-- 2. CONCEPT -->
+  <section id="concept" class="section concept">
+    <div class="container fade-in">
+      <div class="concept-inner">
+        <div class="concept-text">
+          <h2 class="jp-heading-large">名前がないから、<br>何にでもなれる。<br>店舗がないから、<br>どこへでも行ける。</h2>
+          <p>決まった店を持たず、日本各地を旅するタコスとバーガー屋。</p>
+          <p>土地で出会った肉、魚、野菜、調味料。<br>その街の旬を、タコスに包み、バーガーに挟む。</p>
+          <p>この旅で出会う人と食材が、<br>まだ名前のない店を作っていく。</p>
+        </div>
+        <div class="concept-graphic">
+          <!-- 道路・旅のルートを模したグラフィック -->
+          <svg viewBox="0 0 200 400" fill="none" xmlns="http://www.w3.org/2000/svg" class="route-line">
+            <path d="M100 0 C 150 100, 50 200, 100 300 C 150 400, 50 500, 100 600" stroke="var(--rust)" stroke-width="2" stroke-dasharray="4 4"/>
+            <circle cx="100" cy="50" r="4" fill="var(--rust)"/>
+            <circle cx="95" cy="180" r="6" fill="var(--mustard)"/>
+            <circle cx="105" cy="320" r="4" fill="var(--rust)"/>
+          </svg>
+          <div class="stamp-route">ROUTE 2026</div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- 3. コンセプト -->
-  <section id="about" class="section about">
-    <div class="container fade-up">
-      <div class="section-header">
-        <p class="section-en-title">ABOUT THE JOURNEY</p>
-        <h2 class="section-jp-title">土地の味を、タコスとバーガーに。</h2>
-      </div>
-      <div class="about-content">
-        <p>決まった店舗を持たず、日本各地を旅する「名の無いタコスとバーガー屋」。</p>
-        <p>その土地で出会った旬の野菜、肉、魚、調味料。<br>
-        地域によって異なる食材や食文化を学びながら、そこでしか作れないタコスとハンバーガーを生み出します。</p>
-        <p>料理の原点は、作ることより先に「食べることが好きだった」こと。</p>
-        <p>難しく考えず、大人も子どもも、初めてタコスを食べる人も、食べ慣れている人も、思わず笑顔になる料理を届けたい。</p>
-        <p>名前がないから、何にでもなれる。<br>
-        店舗がないから、どこへでも行ける。</p>
-        <p>この旅で出会う人と食材が、これからの店を作っていきます。</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 4. 看板メニュー -->
-  <section id="menu" class="section menu">
-    <div class="container fade-up">
-      <div class="section-header">
-        <p class="section-en-title">SIGNATURE FOOD</p>
-        <h2 class="section-jp-title">旅先で進化する、看板メニュー。</h2>
-      </div>
-      <div class="menu-grid">
-        <!-- Menu 1 -->
-        <div class="menu-card">
-          <div class="menu-img">
-            <img src="images/carnitas.jpg" alt="カルニタスタコス">
-          </div>
-          <div class="menu-text">
-            <h3>カルニタスタコス</h3>
-            <p>時間をかけてやわらかく仕上げた肉の旨味を、香り豊かなサルサや野菜と一緒に包むタコス。</p>
-          </div>
-        </div>
-        <!-- Menu 2 -->
-        <div class="menu-card">
-          <div class="menu-img">
-            <img src="images/fajita.jpg" alt="ファヒータタコス">
-          </div>
-          <div class="menu-text">
-            <h3>ファヒータタコス</h3>
-            <p>香ばしく焼き上げた肉と野菜を、スパイスやオリジナルソースで仕上げる、食べ応えのある一品。</p>
-          </div>
-        </div>
-        <!-- Menu 3 -->
-        <div class="menu-card">
-          <div class="menu-img">
-            <img src="images/ceviche.jpg" alt="セビーチェタコス">
-          </div>
-          <div class="menu-text">
-            <h3>セビーチェタコス</h3>
-            <p>魚介の爽やかな酸味と香味野菜を生かした、土地の海産物とも相性のよいタコス。</p>
-          </div>
-        </div>
-        <!-- Menu 4 -->
-        <div class="menu-card">
-          <div class="menu-img">
+  <!-- 3. SIGNATURE FOOD -->
+  <section id="food" class="section food">
+    <div class="container">
+      <h2 class="en-heading-giant fade-in">SIGNATURE FOOD</h2>
+      
+      <div class="food-magazine fade-in">
+        <!-- チーズバーガー (最大) -->
+        <div class="food-item item-burger">
+          <div class="img-wrapper">
             <img src="images/cheeseburger.jpg" alt="オリジナルチーズバーガー">
+            <div class="food-stamp">ORIGINAL SAUCE</div>
           </div>
-          <div class="menu-text">
-            <h3>オリジナルチーズバーガー</h3>
-            <p>肉の旨味とチーズに、玉ねぎとワインから作るオリジナルソースを合わせた看板バーガー。</p>
+          <div class="food-info">
+            <h3 class="food-name">CHEESE BURGER</h3>
+            <p class="food-desc">肉、チーズ、玉ねぎとワイン。<br>最後に残るのは、まだ誰も知らないソースの記憶。</p>
           </div>
         </div>
-      </div>
-      <div class="menu-notice">
-        <p>訪れた土地の旬の食材を使い、その地域だけの限定メニューを作ることも可能です。<br>
-        アレルギーやヴィーガンなどの個別対応についても、事前にご相談ください。</p>
-      </div>
-    </div>
-  </section>
 
-  <!-- 5. この店の特徴 -->
-  <section class="section features bg-accent fade-up">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-en-title">WHY NO NAME?</h2>
-      </div>
-      <div class="features-grid">
-        <div class="feature-item">
-          <span class="feature-num">01</span>
-          <h3>土地の旬を取り入れる</h3>
-          <p>全国各地で出会った旬の食材を使い、その土地ならではのタコスとハンバーガーを考えます。</p>
-        </div>
-        <div class="feature-item">
-          <span class="feature-num">02</span>
-          <h3>まだ誰も知らないソース</h3>
-          <p>料理人としての強みは、既存の王道だけに縛られない、独自の発想から生まれた数々のソースです。</p>
-        </div>
-        <div class="feature-item">
-          <span class="feature-num">03</span>
-          <h3>世代を越えて楽しめる</h3>
-          <p>老若男女を問わず、タコスを初めて食べる方にも、食べ慣れている方にも喜んでもらえる料理を目指します。</p>
-        </div>
-      </div>
-    </div>
-  </section>
+        <div class="food-side-col">
+          <!-- タコス 1 -->
+          <div class="food-item item-tacos-1">
+            <div class="img-wrapper">
+              <img src="images/carnitas.jpg" alt="カルニタスタコス">
+            </div>
+            <div class="food-info">
+              <h3 class="food-name">CARNITAS TACOS</h3>
+              <p class="food-desc">土地の旬を包めば、<br>その街だけのタコスになる。</p>
+            </div>
+          </div>
 
-  <!-- 6. 依頼できる内容 -->
-  <section id="request" class="section request">
-    <div class="container fade-up">
-      <div class="section-header">
-        <p class="section-en-title">CALL US TO YOUR TOWN</p>
-        <h2 class="section-jp-title">あなたの街に、この店を呼んでください。</h2>
-      </div>
-      <div class="request-content">
-        <div class="request-box">
-          <h3>対応内容</h3>
-          <ul class="check-list">
-            <li>地域イベントへの出店</li>
-            <li>飲食店とのコラボレーション</li>
-            <li><strong>飲食店での間借り営業（最も募集しています）</strong></li>
-            <li><strong>期間限定ポップアップ</strong></li>
-            <li>地域食材を使った限定メニューの開発</li>
-            <li>キャンプ場や宿泊施設での料理提供</li>
-          </ul>
-          <p class="request-note">対応人数の目安：1回あたり最大20名程度</p>
+          <!-- タコス 2 -->
+          <div class="food-item item-tacos-2">
+            <div class="img-wrapper">
+              <img src="images/ceviche.jpg" alt="セビーチェタコス">
+              <div class="food-stamp stamp-local">LOCAL INGREDIENTS</div>
+            </div>
+            <div class="food-info">
+              <h3 class="food-name">CEVICHE TACOS</h3>
+              <p class="food-desc">海のある街なら、<br>魚介の酸味が主役を張る。</p>
+            </div>
+          </div>
         </div>
-        <div class="request-box">
-          <h3>こんな方におすすめです</h3>
-          <ul class="check-list">
-            <li>地域イベントの主催者</li>
-            <li>飲食店のオーナー</li>
-            <li>キャンプ場・宿泊施設の運営者</li>
-            <li>地域の生産者</li>
-            <li>個人でイベントを企画している方</li>
-          </ul>
-        </div>
-      </div>
-      <div class="request-cta">
-        <p>「こんな場所でも呼べる？」という段階でも、まずはお気軽にご相談ください。</p>
-        <a href="#contact" class="btn btn-primary">出店について相談する</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- 写真ギャラリー -->
-  <section class="section gallery fade-up">
-    <div class="container-fluid">
-      <div class="gallery-grid">
-        <img src="images/gallery-01.jpg" alt="出店風景 1">
-        <img src="images/gallery-02.jpg" alt="出店風景 2">
-        <img src="images/gallery-03.jpg" alt="調理風景 1">
-        <img src="images/gallery-04.jpg" alt="調理風景 2">
-        <img src="images/gallery-05.jpg" alt="料理写真 1">
-        <img src="images/gallery-06.jpg" alt="料理写真 2">
-      </div>
-    </div>
-  </section>
-
-  <!-- 7. 出店スケジュール -->
-  <section id="schedule" class="section schedule bg-cream fade-up">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-en-title">ON THE ROAD</p>
-        <h2 class="section-jp-title">これから訪れる場所。</h2>
-      </div>
-      <p class="schedule-lead">2026年9月の予定</p>
-      <div class="schedule-list">
-        <div class="schedule-item">
-          <h3>兵庫県神戸市中央区海岸通</h3>
-          <ul>
-            <li>9月4日</li>
-            <li>9月5日</li>
-            <li>9月11日〜15日</li>
-          </ul>
-        </div>
-        <div class="schedule-item">
-          <h3>兵庫県丹波市山南町池谷</h3>
-          <ul>
-            <li>9月7日〜9日</li>
-            <li>9月18日〜22日</li>
-            <li>9月26日</li>
-            <li>9月28日〜30日</li>
-          </ul>
-        </div>
-      </div>
-      <div class="schedule-notice">
-        <p>※訪問期間中または前後の日程で、出店・間借り営業・コラボのご依頼を募集しています。</p>
-        <p>現在地や今後の出店予定は、随時更新します。<br>
-        近くにいる期間に「うちでも出店してほしい」「一緒にイベントをしたい」という方は、InstagramのDMからご連絡ください。</p>
-      </div>
-      
-      <div class="next-destination">
-        <p class="next-title">NEXT DESTINATION：OKINAWA</p>
-        <p class="next-text">沖縄の飲食店・キャンプ場・イベント主催者からのご連絡をお待ちしています。</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 8. 料理人プロフィール -->
-  <section id="chef" class="section chef fade-up">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-en-title">MEET THE COOK</p>
-        <h2 class="section-jp-title">原口 刀麻</h2>
-        <p class="chef-title">全国を旅する「名の無いタコスとバーガー屋」の料理人</p>
-      </div>
-      <div class="chef-content">
-        <div class="chef-img">
-          <img src="images/profile.jpg" alt="料理人 原口刀麻のプロフィール写真">
-        </div>
-        <div class="chef-text">
-          <p>飲食業界での経験は10年。</p>
-          <p>TEX-MEXスタイルのダイナーで店長を務め、店舗運営に携わりながら、タコスやハンバーガーを作り続けてきました。</p>
-          <p>料理人を目指した原点は、ただ純粋に「食べることが好きだった」こと。</p>
-          <p>だからこそ、料理を難しいものにはしたくありません。<br>
-          年齢や性別、食文化の違いを越えて、誰もが一口目から楽しめる料理を作りたいと考えています。</p>
-          <p>全国を旅する理由は、地域ごとの食材や食文化に出会い、学び、それらを使って新しいタコスとハンバーガーを開発するため。</p>
-          <p>目指しているのは、これまでの王道をそのまま再現することではありません。</p>
-          <p>地域の食材と、独自に作り上げたソースを掛け合わせ、食べた人の記憶に残る、まったく新しいスタイルを生み出すことです。</p>
-          <p>そしていつか、海外でフードトラックを走らせながら、その土地に根差した料理を届けていきます。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 9. 設備・条件 -->
-  <section class="section conditions fade-up">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-en-title">WHAT WE NEED</p>
-        <h2 class="section-jp-title">出店に必要な設備について</h2>
-      </div>
-      
-      <div class="condition-box">
-        <h3>基本条件</h3>
-        <ul class="dot-list">
-          <li>キッチン設備が必要です</li>
-          <li>屋外での提供にも対応可能です</li>
-          <li>ガスコンロが必要です</li>
-          <li>ハンバーガーを提供する場合は、業務用換気扇が必要です</li>
-          <li>1回あたり最大20名程度が目安です</li>
-          <li>ご予約は原則として1週間前までにお願いします</li>
-        </ul>
-      </div>
-
-      <div class="condition-box">
-        <h3>料金について</h3>
-        <p>内容、人数、開催場所、使用する食材、必要な交通・宿泊条件を確認したうえで、個別にお見積もりします。</p>
-        <p>見積金額には、原則として以下を含みます。</p>
-        <ul class="dot-list">
-          <li>食材費</li>
-          <li>交通費</li>
-          <li>必要に応じた宿泊費</li>
-        </ul>
-        <p>※開催場所や内容によって条件が異なるため、正式な金額は事前相談後に案内します。</p>
-      </div>
-
-      <div class="condition-box">
-        <h3>キャンセル・注意事項</h3>
-        <p>キャンセル料が発生する場合があります。<br>
-        具体的な条件と金額は、お見積もり・予約確定時にお伝えします。</p>
-        <p class="note">【注意事項】<br>
-        保健所への届出や営業許可などが必要な場合は、開催地域・会場・提供方法に応じて事前確認を行います。</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- 10. 依頼から当日までの流れ -->
-  <section class="section flow fade-up bg-cream">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-en-title">HOW TO BOOK</h2>
-      </div>
-      <div class="flow-steps">
-        <div class="step-card">
-          <div class="step-num">STEP 01</div>
-          <h3>お問い合わせ</h3>
-          <p>InstagramのDMまたは申込フォームから、希望内容をご連絡ください。</p>
-        </div>
-        <div class="step-card">
-          <div class="step-num">STEP 02</div>
-          <h3>内容の確認</h3>
-          <p>希望日時、開催場所、予定人数、予算、使用できる設備、アレルギーなどを確認します。</p>
-        </div>
-        <div class="step-card">
-          <div class="step-num">STEP 03</div>
-          <h3>ご提案・お見積もり</h3>
-          <p>提供メニュー、必要な設備、当日の進行、料金をご提案します。内容に問題がなければ予約確定となります。</p>
-        </div>
-        <div class="step-card">
-          <div class="step-num">STEP 04</div>
-          <h3>出店・料理提供</h3>
-          <p>必要な食材を準備して現地へ伺い、その場所でしか味わえない料理を提供します。</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 11. よくある質問 -->
-  <section class="section faq fade-up">
-    <div class="container">
-      <div class="section-header">
-        <h2 class="section-en-title">FAQ</h2>
-      </div>
-      <div class="faq-list">
-        <details class="faq-item">
-          <summary>Q. 全国どこでも依頼できますか？<span class="icon"></span></summary>
-          <div class="faq-answer">A. 全国対応です。開催場所や日程、交通・宿泊条件を確認したうえでご案内します。</div>
-        </details>
-        <details class="faq-item">
-          <summary>Q. 何人から依頼できますか？<span class="icon"></span></summary>
-          <div class="faq-answer">A. 内容によって異なるため、少人数の場合もまずはご相談ください。1回あたり最大20名程度が目安です。</div>
-        </details>
-        <details class="faq-item">
-          <summary>Q. 料金はいくらですか？<span class="icon"></span></summary>
-          <div class="faq-answer">A. 人数、場所、料理内容、食材、必要設備などを確認して個別にお見積もりします。食材費・交通費・必要に応じた宿泊費を含めてご提案します。</div>
-        </details>
-        <details class="faq-item">
-          <summary>Q. 屋外イベントでも依頼できますか？<span class="icon"></span></summary>
-          <div class="faq-answer">A. 対応可能です。ただし、調理環境、電源、火器使用の可否、給排水設備などを事前に確認します。</div>
-        </details>
-        <details class="faq-item">
-          <summary>Q. アレルギーやヴィーガン対応はできますか？<span class="icon"></span></summary>
-          <div class="faq-answer">A. 事前相談により対応可能です。調理環境によっては完全な分離が難しい場合があるため、詳細を確認したうえで回答します。</div>
-        </details>
-        <details class="faq-item">
-          <summary>Q. お酒の提供やペアリングもできますか？<span class="icon"></span></summary>
-          <div class="faq-answer">A. ご相談可能です。ただし、会場や提供方法に応じて必要な許可や条件を確認します。</div>
-        </details>
-        <details class="faq-item">
-          <summary>Q. いつまでに予約すればよいですか？<span class="icon"></span></summary>
-          <div class="faq-answer">A. 原則として希望日の1週間前までにご連絡ください。遠方や規模の大きいイベントは、できるだけ早めにご相談ください。</div>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- 12. 問い合わせCTA -->
-  <section id="contact" class="section contact fade-up bg-dark">
-    <div class="container">
-      <div class="contact-header">
-        <p class="section-en-title">BRING NO NAME TO YOUR TOWN.</p>
-        <h2 class="section-jp-title">あなたの街で、まだ名前のない一皿を。</h2>
-      </div>
-      <div class="contact-message">
-        <p>地域イベント、飲食店での間借り営業、ポップアップ、キャンプ場での料理提供など、全国からご相談を受け付けています。</p>
-        <p>まだ内容が決まっていなくても構いません。</p>
-        <p>「この場所で何かできないか」<br>
-        「地域の食材を使った料理を作ってほしい」</p>
-        <p>そんな一言から、新しいメニューと出会いが始まります。</p>
-      </div>
-      
-      <div class="contact-buttons">
-        <!-- リンク差し替え用: Instagram -->
-        <!-- hrefをInstagramのURLに変更してください -->
-        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-insta">InstagramのDMで相談する</a>
         
-        <!-- リンク差し替え用: 申込フォーム -->
-        <!-- hrefをGoogleフォーム等のURLに変更してください -->
-        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-form">申込フォームから依頼する</a>
+        <!-- 手書き風矢印やメモ -->
+        <div class="handwritten-note hw-1">Bite it!</div>
       </div>
-      
-      <!-- サイト内にフォームを実装する場合のUI（送信先未設定のため見本のみ）-->
-      <!-- 
-      <div class="form-wrapper">
-        <form action="#" method="POST" class="contact-form">
-          <div class="form-group">
-            <label>お名前 <span class="req">必須</span></label>
-            <input type="text" name="name" required>
-          </div>
-          <div class="form-group">
-            <label>会社名・団体名・店舗名</label>
-            <input type="text" name="company">
-          </div>
-          <div class="form-group">
-            <label>メールアドレス <span class="req">必須</span></label>
-            <input type="email" name="email" required>
-          </div>
-          <div class="form-group">
-            <label>電話番号</label>
-            <input type="tel" name="tel">
-          </div>
-          <div class="form-group">
-            <label>希望日時</label>
-            <input type="text" name="date">
-          </div>
-          <div class="form-group">
-            <label>開催場所</label>
-            <input type="text" name="place">
-          </div>
-          <div class="form-group">
-            <label>依頼内容</label>
-            <input type="text" name="content">
-          </div>
-          <div class="form-group">
-            <label>予定人数</label>
-            <input type="text" name="headcount">
-          </div>
-          <div class="form-group">
-            <label>予算</label>
-            <input type="text" name="budget">
-          </div>
-          <div class="form-group">
-            <label>使用できる設備</label>
-            <textarea name="equipment"></textarea>
-          </div>
-          <div class="form-group">
-            <label>希望する料理</label>
-            <textarea name="food_request"></textarea>
-          </div>
-          <div class="form-group">
-            <label>アレルギー・個別対応</label>
-            <textarea name="allergy"></textarea>
-          </div>
-          <div class="form-group">
-            <label>その他の相談内容</label>
-            <textarea name="others"></textarea>
-          </div>
-          <div class="form-group checkbox-group">
-            <label>
-              <input type="checkbox" name="agree" required>
-              個人情報の取り扱いへの同意
-            </label>
-          </div>
-          <button type="submit" class="btn btn-submit" disabled>送信する</button>
-        </form>
-      </div> 
-      -->
     </div>
   </section>
 
-  <!-- 13. フッター -->
-  <footer class="footer">
-    <div class="footer-container">
-      <div class="footer-info">
-        <img src="images/logo.png" alt="名の無いタコスとバーガー屋" class="footer-logo">
-        <p class="footer-name">名の無いタコスとバーガー屋<br>原口 刀麻</p>
-        <p class="footer-area">全国対応</p>
-      </div>
-      <div class="footer-links">
-        <ul>
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#menu">MENU</a></li>
-          <li><a href="#request">REQUEST</a></li>
-          <li><a href="#schedule">SCHEDULE</a></li>
-          <li><a href="#chef">CHEF</a></li>
-          <li><a href="#contact">お問い合わせ</a></li>
-          <!-- リンク差し替え用: Instagram -->
-          <li><a href="#" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-        </ul>
+  <!-- 4. POP-UP REQUEST -->
+  <section id="request" class="section request">
+    <div class="container fade-in">
+      <div class="request-poster">
+        <h2 class="en-heading-giant">BRING US<br>TO YOUR TOWN</h2>
+        <div class="request-tags">
+          <span class="r-tag highlight">POP-UP</span>
+          <span class="r-tag highlight">SHARED KITCHEN</span>
+          <span class="r-tag">RESTAURANT COLLAB</span>
+          <span class="r-tag">LOCAL EVENT</span>
+          <span class="r-tag">CAMPSITE</span>
+          <span class="r-tag">LOCAL INGREDIENT MENU</span>
+        </div>
+        
+        <div class="request-text">
+          <p class="req-lead">空いているキッチンに、<br>名の無い店を呼びませんか？</p>
+          <p class="req-sub">飲食店での間借り営業や期間限定ポップアップを最も募集しています。</p>
+        </div>
+
+        <div class="request-cta">
+          <a href="#contact" class="btn btn-secondary">出店・コラボを相談する</a>
+        </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 名の無いタコスとバーガー屋</p>
+  </section>
+
+  <!-- 5. ON THE ROAD -->
+  <section id="tour" class="section tour">
+    <div class="container fade-in">
+      <div class="tour-header">
+        <h2 class="en-heading-giant">THE NAMELESS FOOD TOUR</h2>
+        <p class="tour-month">SEPTEMBER 2026</p>
+      </div>
+      
+      <div class="tour-list">
+        <div class="tour-item">
+          <div class="tour-loc">KOBE / 神戸市中央区海岸通</div>
+          <div class="tour-dates">
+            <span>SEP 04</span>
+            <span>SEP 05</span>
+            <span>SEP 11–15</span>
+          </div>
+          <div class="tour-stamp">BOOKING OPEN</div>
+        </div>
+        
+        <div class="tour-item">
+          <div class="tour-loc">TAMBA / 丹波市山南町池谷</div>
+          <div class="tour-dates">
+            <span>SEP 07–09</span>
+            <span>SEP 18–22</span>
+            <span>SEP 26</span>
+            <span>SEP 28–30</span>
+          </div>
+          <div class="tour-stamp">BOOKING OPEN</div>
+        </div>
+      </div>
+
+      <div class="tour-next">
+        <p class="next-label">NEXT STOP</p>
+        <p class="next-place">OKINAWA</p>
+      </div>
+
+      <div class="tour-message">
+        <p>近くにいるなら、呼んでください。<br>イベント、間借り、ポップアップのご依頼を募集しています。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. GALLERY -->
+  <section id="gallery" class="section gallery">
+    <div class="container-fluid">
+      <div class="scrapbook fade-in">
+        <div class="scrap-item s-g1 img-wrapper">
+          <img src="images/gallery-01.jpg" alt="風景写真 1">
+          <span class="scrap-cap">FROM THE ROAD</span>
+        </div>
+        <div class="scrap-item s-g2 img-wrapper">
+          <img src="images/gallery-02.jpg" alt="仕込み風景">
+        </div>
+        <div class="scrap-item s-g3 img-wrapper">
+          <img src="images/gallery-03.jpg" alt="接客風景">
+          <span class="scrap-cap">GOOD FOOD, GOOD PEOPLE</span>
+        </div>
+        <div class="scrap-item s-g4 img-wrapper">
+          <img src="images/gallery-04.jpg" alt="風景写真 2">
+          <span class="scrap-cap">ONE NIGHT ONLY</span>
+        </div>
+        <div class="scrap-item s-g5 img-wrapper">
+          <img src="images/gallery-05.jpg" alt="料理風景">
+        </div>
+        <div class="scrap-item s-g6 img-wrapper">
+          <img src="images/gallery-06.jpg" alt="料理">
+          <span class="scrap-cap">LOCAL MEETS TEX-MEX</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. CHEF -->
+  <section id="chef" class="section chef">
+    <div class="container fade-in">
+      <h2 class="en-heading-giant chef-title">THE MAN BEHIND<br>THE GRILL</h2>
+      
+      <div class="chef-layout">
+        <div class="chef-photo img-wrapper">
+          <img src="images/profile.jpg" alt="鉄板に向かう原口刀麻">
+        </div>
+        
+        <div class="chef-info">
+          <h3 class="chef-name">TOMA HARAGUCHI<br><span>原口 刀麻</span></h3>
+          <p class="chef-lead">
+            飲食経験10年。<br>
+            TEX-MEXスタイルのダイナーで、店長として料理と店舗運営を経験。
+          </p>
+          <p class="chef-story">
+            食べることが好きだった。<br>
+            だから、食べた人が笑う料理を作りたい。<br><br>
+            土地の食材と、まだ誰も知らないソースを積み込み、今日も次の街へ向かう。
+          </p>
+          
+          <details class="chef-bio">
+            <summary>詳細プロフィールを見る</summary>
+            <div class="bio-content">
+              <p>TEX-MEX料理の奥深さに魅了され、数多くのオリジナルソースを開発。既存の枠にとらわれないタコスとハンバーガーを追求するため、店舗を持たずに全国を旅するスタイルを選択。将来は海外でのフードトラック運営を目標としている。</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. HOW TO BOOK / 9. CONDITIONS / 10. FAQ -->
+  <section class="section information">
+    <div class="container fade-in">
+      <div class="info-grid">
+        
+        <!-- HOW TO BOOK -->
+        <div class="info-block">
+          <h2 class="en-heading-medium">HOW TO BOOK</h2>
+          <ol class="book-steps">
+            <li><strong>CONTACT:</strong> InstagramのDM等から希望内容をご連絡ください。</li>
+            <li><strong>HEARING:</strong> 希望日時、場所、人数、設備などを確認します。</li>
+            <li><strong>PLAN & QUOTE:</strong> メニューと料金をご提案し、予約確定となります。</li>
+            <li><strong>ON THE DAY:</strong> 食材を準備して現地へ伺い、料理を提供します。</li>
+          </ol>
+        </div>
+
+        <!-- CONDITIONS -->
+        <div class="info-block">
+          <h2 class="en-heading-medium">CONDITIONS</h2>
+          <ul class="cond-list">
+            <li><strong>設備:</strong> キッチン、ガスコンロ必須。バーガー提供時は業務用換気扇が必要です。</li>
+            <li><strong>人数:</strong> 1回あたり最大20名程度。</li>
+            <li><strong>期限:</strong> 原則1週間前までのご予約。</li>
+            <li><strong>料金:</strong> 条件確認後に個別見積もり（食材・交通・宿泊費含む）。キャンセル料規定あり。</li>
+            <li><strong>許可等:</strong> 保健所の届出が必要な場合は事前確認を行います。</li>
+          </ul>
+        </div>
+
+        <!-- FAQ -->
+        <div class="info-block full-width">
+          <h2 class="en-heading-medium">FAQ</h2>
+          <div class="faq-compact">
+            <dl>
+              <dt>全国どこでも依頼できますか？</dt>
+              <dd>はい、全国対応です。交通費や宿泊条件を含めてご案内します。</dd>
+              <dt>少人数でも可能ですか？</dt>
+              <dd>内容によりますので、まずはご相談ください。</dd>
+              <dt>屋外やキャンプ場でも可能ですか？</dt>
+              <dd>調理環境（火器、電源、水場）を事前確認のうえ対応可能です。</dd>
+              <dt>アレルギー・ヴィーガン対応は？</dt>
+              <dd>事前相談により対応可能です（完全分離が難しい環境の場合はご相談）。</dd>
+            </dl>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 11. FINAL CTA -->
+  <section id="contact" class="section final-cta">
+    <div class="cta-bg img-wrapper">
+      <img src="images/hero.jpg" alt="夕暮れの道路や料理風景">
+      <div class="cta-overlay"></div>
+    </div>
+    
+    <div class="cta-content fade-in">
+      <h2 class="en-heading-giant">BRING THE NAMELESS DINER<br>TO YOUR TOWN.</h2>
+      <p class="cta-jp">あなたの街で、<br>まだ名前のない一皿を。</p>
+      
+      <div class="cta-text">
+        <p>店がなくても、キッチンがあれば始められる。<br>内容が決まっていなくても、まずは話を聞かせてください。</p>
+      </div>
+
+      <div class="cta-actions">
+        <a href="#" target="_blank" rel="noopener" class="btn btn-primary">Instagramで出店を相談する</a>
+        <a href="#" target="_blank" rel="noopener" class="link-sub">申込フォームから問い合わせる</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">NAMELESS TACOS & BURGERS</div>
+        <div class="footer-links">
+          <a href="#" target="_blank" rel="noopener">INSTAGRAM</a>
+          <a href="#" target="_blank" rel="noopener">FORM</a>
+        </div>
+      </div>
+      <p class="copyright">&copy; 2026 THE NAMELESS ROAD DINER</p>
     </div>
   </footer>
 
-  <!-- 14. スマートフォン固定CTA -->
+  <!-- SP Fixed CTA -->
   <div class="sp-fixed-cta">
-    <!-- リンク差し替え用: Instagram -->
-    <a href="#" class="btn btn-insta-fixed">Instagramで出店を相談する</a>
+    <a href="#" target="_blank" rel="noopener" class="btn btn-primary btn-block">Instagramで出店を相談する</a>
   </div>
 
   <script src="script.js"></script>
